@@ -2,7 +2,7 @@
     lang="ts"
     setup
 >
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
     name: string
     phone: string
     address: string

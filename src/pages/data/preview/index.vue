@@ -2,8 +2,8 @@
     lang="ts"
     setup
 >
-import AppPreview from '@/components/lib/app-preview/index.vue';
-import AppPreviewItem from '@/components/lib/app-preview-item/index.vue';
+import AppPreview from '@/components/lib/app-preview/app-preview.vue';
+import AppPreviewItem from '@/components/lib/app-preview-item/app-preview-item.vue';
 
 definePageConfig({
     navigationBarTitleText: '表单预览',

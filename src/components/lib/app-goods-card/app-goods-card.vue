@@ -6,7 +6,7 @@ import type { CommonEventFunction } from '@tarojs/components';
 import Taro from '@tarojs/taro';
 import { computed } from 'vue';
 import { isNullOrUndefined, isString } from '@/utils/TypeTools/TypesTools';
-import AppNumber from '@/components/lib/app-number/index.vue';
+import AppNumber from '@/components/lib/app-number/app-number.vue';
 
 const props = withDefaults(defineProps<{
     imageSrc?: string | string[]

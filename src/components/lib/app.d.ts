@@ -1,11 +1,11 @@
 interface IBaseState {
     /** 是否激活 */
-    activated: Boolean
+    activated: boolean
 }
 
 interface IVisible {
     /** 是否显示 */
-    show: Boolean
+    show: boolean
 }
 
 interface IMsg {

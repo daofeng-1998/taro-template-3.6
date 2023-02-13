@@ -3,7 +3,7 @@
     setup
 >
 import Taro from '@tarojs/taro';
-import AppPage from '@/components/lib/app-page/index.vue';
+import AppPage from '@/components/lib/app-page/app-page.vue';
 import { useCountDown, useFormData } from '@/hooks/use-lib';
 import { useLoading } from '@/components/lib/app-loading/hooks';
 import { useDialog } from '@/components/lib/app-dialog/hooks';
@@ -74,7 +74,7 @@ const route = {
     },
 };
 
-const [formData, reset] = useFormData(() => ({
+const [formData] = useFormData(() => ({
     username: '',
     password: '',
 }));
@@ -83,10 +83,6 @@ const { action, isActive, count } = useCountDown();
 
 const onSms = () => {
     action(10);
-};
-
-const onTestLog = () => {
-    console.log('test log');
 };
 
 const onTestHttp = () => {

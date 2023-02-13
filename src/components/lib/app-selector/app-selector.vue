@@ -3,7 +3,7 @@
     setup
 >
 import { reactive } from 'vue';
-import AppSearchBar from '@/components/lib/app-search-bar/index.vue';
+import AppSearchBar from '@/components/lib/app-search-bar/app-search-bar.vue';
 import { useVModel } from '@/hooks/use-lib';
 
 const props = withDefaults(defineProps<{

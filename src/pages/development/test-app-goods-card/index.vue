@@ -4,7 +4,7 @@
 >
 import { ref } from 'vue';
 import { useDialog } from '@/components/lib/app-dialog/hooks';
-import AppGoodsCard from '@/components/lib/app-goods-card/index.vue';
+import AppGoodsCard from '@/components/lib/app-goods-card/app-goods-card.vue';
 
 const dialog = useDialog();
 const goodsCount = ref(1);

@@ -2,12 +2,12 @@
     lang="ts"
     setup
 >
-import AppSafeBottom from '@/components/lib/app-safe-bottom.vue';
-import AppLoading from '@/components/lib/app-loading/index.vue';
-import AppDialog from '@/components/lib/app-dialog/index.vue';
+import AppSafeBottom from '@/components/lib/app-safe-bottom/app-safe-bottom.vue';
+import AppLoading from '@/components/lib/app-loading/app-loading.vue';
+import AppDialog from '@/components/lib/app-dialog/app-dialog.vue';
 import { useComponentState } from '@/components/lib/script/component-states';
 import { SYMBOL_DIALOG, SYMBOL_LOADING, SYMBOL_NOTIFY } from '@/components/lib/script/Symbols';
-import AppNotify from '@/components/lib/app-notify/index.vue';
+import AppNotify from '@/components/lib/app-notify/app-notify.vue';
 
 withDefaults(defineProps<{
     safeBottom?: boolean

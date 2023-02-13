@@ -6,8 +6,8 @@ import { mergeFunc } from '@/utils/TypeTools/FunctionTools';
 import { BASE_TYPE_ARRAY, isNullOrUndefined } from '@/utils/TypeTools/TypesTools';
 import { useInterval } from '@/hooks/shared/useInterval';
 
-export function useVModel<P extends Data, >(props: P, key: keyof P, emit: Function) {
-    return computed({
+export function useVModel<P extends Data, K extends keyof P,>(props: P, key: K, emit: Function) {
+    return computed<P[K]>({
         get: () => props[key],
         set: val => emit(`update:${String(key)}`, val),
     });
@@ -41,7 +41,7 @@ export function useSumForList<T,>(
  * 使用一个表单数据对象
  * @param newData
  */
-export function useFormData<D extends object, R, >(newData: () => D): [UnwrapNestedRefs<D>, () => void, Ref<R | null>] {
+export function useFormData<D extends object, R,>(newData: () => D): [UnwrapNestedRefs<D>, () => void, Ref<R | null>] {
     const data = reactive(newData());
 
     const reset = () => Object.assign(data, newData());
@@ -49,7 +49,7 @@ export function useFormData<D extends object, R, >(newData: () => D): [UnwrapNes
     return [data, reset, ref(null)];
 }
 
-export function useForm<F extends object, >(data: useFormOptions<F>): [UnwrapNestedRefs<FormData<F>>, () => void] {
+export function useForm<F extends object,>(data: useFormOptions<F>): [UnwrapNestedRefs<FormData<F>>, () => void] {
     // 基本数据类型 + function
     const dataTypes = BASE_TYPE_ARRAY.concat('function');
 
@@ -94,7 +94,7 @@ export function useForm<F extends object, >(data: useFormOptions<F>): [UnwrapNes
  * 创建一个受控ref
  * @param value
  */
-export function useDelayRef<T, >(value: T): [Ref<T>, () => void] {
+export function useDelayRef<T,>(value: T): [Ref<T>, () => void] {
     let update;
 
     const state = customRef<T>((track, trigger) => {

@@ -3,7 +3,7 @@
     setup
 >
 import { Router } from 'tarojs-router-next';
-import AppPage from '@/components/lib/app-page/index.vue';
+import AppPage from '@/components/lib/app-page/app-page.vue';
 
 definePageConfig({
     navigationBarTitleText: '$END$',

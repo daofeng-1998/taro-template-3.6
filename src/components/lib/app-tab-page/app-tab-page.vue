@@ -4,7 +4,7 @@
 >
 import Taro from '@tarojs/taro';
 import { computed } from 'vue';
-import AppPage from '@/components/lib/app-page/index.vue';
+import AppPage from '@/components/lib/app-page/app-page.vue';
 import { tabBar } from '@/config/tabBar';
 import { switchAny } from '@/utils/RouterNext';
 

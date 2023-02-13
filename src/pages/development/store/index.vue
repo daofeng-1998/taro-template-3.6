@@ -2,7 +2,7 @@
     lang="ts"
     setup
 >
-import AppPage from '@/components/lib/app-page/index.vue';
+import AppPage from '@/components/lib/app-page/app-page.vue';
 import { useCountStore } from '@/store/modules/count';
 
 const countStore = useCountStore();

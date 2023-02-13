@@ -26,6 +26,7 @@ export default { name: 'AppSquareImg' };
         class="app-square-img"
     >
         <image
+            v-if="src"
             :mode="mode"
             :src="src"
             class="app-square-img__image"
